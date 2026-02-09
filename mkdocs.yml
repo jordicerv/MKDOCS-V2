@@ -1,1 +1,58 @@
-site_name: My Docs
+# Informació del lloc
+site_name: MKDOCS-V2
+site_description: Documentació per a MKDOCS-V2
+site_author: Jordi Cervera
+# Opcional: Enllaç al teu repositori de GitHub
+repo_url: https://github.com/jordicerv/MKDOCS-V2 # Canvia 'usuari' pel teu nom d'usuari
+repo_name: MKDOCS-V2
+
+# Navegació
+nav:
+  - 'Inici': 'index.md'
+  - 'Primer trimestre':
+      - 'Introducció': 'Targets.md'
+      - 'Kernels': 'kernel.md'
+      - 'Vpnwindows': 'Vpn.md'
+      - 'Unir client ubuntu a domini windows': 'Ubuntu-ACDC.md'
+
+# Tema i aspecte visual
+theme:
+  name: material
+  language: ca  # Important: El codi per a català és 'ca'
+  features:
+    - navigation.tabs
+    - content.code.copy
+  palette:
+    # Mode Clar
+    - scheme: default
+      primary: green
+      accent: cleargreen
+      toggle:
+        icon: material/weather-sunny
+        name: Canvia a mode fosc
+    # Mode Fosc
+    - scheme: slate
+      primary: black
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Canvia a mode clar
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+# Plugins
+plugins:
+  - search
+  - to-pdf
+# Extensions de Markdown
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - nl2br # Converteix salts de línia en <br>
+  - attr_list # Permet afegir atributs HTML/CSS a Markdown
+  - md_in_html # Permet processar Markdown dins de blocs HTML
